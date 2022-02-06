@@ -22,16 +22,24 @@ const ApiCreator = (search, type) => {
     }
 }
 
+//bookSearch action creator (helps make things more reusable)
 export const bookSearch = (books) => {
+    //returns a function with the parameter of the dispatch so we can halt the dispatch to get api information
     return (dispatch) => {
         api_link = ApiCreator(books.userSearch, books.searchType);
         if (api_link !== ''){
+            //fetches api information
             fetch(api_link)
                 .then( res => res.json())
                 .then(data =>{
+                    //dispatches new api objects to the reducer
                     dispatch({ type: 'Book Search', books:data});
                 })
-                .catch((err) => console.log(err))
+                //if there is an error, dispatch error to reducer
+                .catch((err) => {
+                    console.log(err)
+                    dispatch({ type: 'Error', err});
+                })
         }
         
     }
