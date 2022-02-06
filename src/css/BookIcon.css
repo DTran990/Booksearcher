@@ -1,0 +1,12 @@
+#bookicon{
+    width: 100%; 
+    height: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bookicon #icon{
+    margin-top:-50px;
+    margin-bottom: 70px;
+}
