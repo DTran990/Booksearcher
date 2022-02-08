@@ -3,12 +3,13 @@ import '../../css/Book.css';
 import { connect } from 'react-redux';
 
 const Book = (props) => {
+
   let id = window.location.search.slice(4,);
-  let book = props.books.map((b) => {
+  let book = props.history.map((b) => {
     return b.items.filter((item) => (item.id === id))
   })
-  console.log('this is ', book[0][0])
-  book = book[0][0];
+  console.log('this is ', book)
+  book = book[book.length-1][0];
   const inObject = (obj,request) =>{
     let test = 'N/A';
     try {
@@ -111,7 +112,7 @@ const Book = (props) => {
 
 const mapStateToProps = (state) =>{
   return {
-    books: state.books
+    history: state.bookhistory
   }
 }
 export default connect(mapStateToProps)(Book);

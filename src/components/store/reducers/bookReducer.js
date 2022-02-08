@@ -1,5 +1,6 @@
 const initState = {
-    books: []
+    books: [],
+    bookhistory: []
 }
 
 
@@ -8,7 +9,8 @@ const bookReducer = (state = initState, action) => {
         case 'Book Search':
             console.log(action.books);
             return {
-                books:[action.books]
+                books:[action.books],
+                bookhistory:[...state.bookhistory, action.books]
             };
         case 'Error':
             console.log(action.err);
