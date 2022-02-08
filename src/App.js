@@ -7,7 +7,7 @@ import Search from './components/layout/Search';
 import Books from './components/books/Books';
 import Book from './components/books/Book';
 import BookIcon from './components/layout/BookIcon';
-
+import BacktoTop from './components/layout/BacktoTop';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
                   <Route path='/Book' element={<Book/>}></Route>
               </Routes>
           </div>
+          <BacktoTop/>
           <Footer/>
       </div>
     </BrowserRouter>
