@@ -17,7 +17,7 @@ const Search = (props) => {
     let searchType = document.getElementById("dropdown").value
     //Calls dispatch function
     props.bookSearch({userSearch, searchType})
-    navigate("/books");
+    navigate("/search");
   }
   //On form submission, calls function handleSubmit
   return <form id="searchform" onSubmit={handleSubmit}>

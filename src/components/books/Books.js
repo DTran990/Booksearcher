@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Books.css';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const Books = (props) => {
@@ -63,15 +64,16 @@ const Books = (props) => {
         { books && books.map((b) => {
             return (b.items && b.items.map((book) =>{
               console.log(book)
+              let keyLink = '/Book?id='+book.id;
               return (
                   <div id='book-container' key={book.id}>
-                      <img src={inObject(book,"thumbnail")} alt={book.volumeInfo.title} width="128px" height="198px"/>
+                      <img src={inObject(book,"thumbnail")} alt={book.volumeInfo.title} width="190px" height="260px"/>
                       <div id="book-info">
-                          <h3>{book.volumeInfo.title}</h3>
-                          <p className='book-p'>Authors: {inObject(book,'authors')}</p>
-                          <p className='book-p'>Date Published: {inObject(book, 'publishdate')}</p>
-                          <p className='book-p'>Publisher: {inObject(book, 'publisher')}</p>
-                          
+                          <Link to={keyLink} className="book-link"><h3>{book.volumeInfo.title}</h3></Link>
+                          <p className='book-p'><span>Authors:</span> {inObject(book,'authors')}</p>
+                          <p className='book-p'><span>Date Published:</span> {inObject(book, 'publishdate')}</p>
+                          <p className='book-p'><span>Publisher:</span> {inObject(book, 'publisher')}</p>
+                          <Link to={keyLink}><button className='MoreBtn'>More Info</button></Link>
                       </div>
                   </div> 
               )

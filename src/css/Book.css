@@ -1,0 +1,53 @@
+#Book{
+    width:90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 250px;
+    margin-top:150px;
+}
+
+#info{
+    background: #0D5C63;
+    padding: 15px;
+    height: 260px;
+    width: 500px;
+    
+}
+
+#info h3{
+    text-align: center;
+    color:#44a1a0;
+    margin-bottom:25px;
+}
+
+#info p{
+    margin:5px;
+}
+
+#desc{
+    background: #0D5C63;
+    padding: 15px;
+    min-height: 260px;
+    width: 600px;
+    margin-left: 20px;
+    position: relative;
+}
+
+#desc h3{
+    text-align: center;
+    color:#44a1a0;
+    margin-bottom:25px;
+}
+
+#desc p{
+    margin-bottom: 50px;
+}
+
+#desc button{
+    position:absolute;
+    bottom:10px;
+    left: 15px;
+}
+

@@ -15,10 +15,9 @@ function App() {
       <div className="App">
           <Navbar/>
           <div id="app-container">
-            <Search/>
               <Routes>
-                  <Route exact path='/' element={<BookIcon/>}></Route>
-                  <Route path='/Books' element={<Books/>}></Route>
+                  <Route path='/' element={<><Search/><BookIcon/></>}></Route>
+                  <Route path='/search' element={<><Search/><Books/></>}></Route>
                   <Route path='/Book' element={<Book/>}></Route>
               </Routes>
           </div>
