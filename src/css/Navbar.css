@@ -18,3 +18,9 @@ nav h1 span{
 #navlink{
     color:#fffffa;
 }
+
+@media only screen and (max-width: 360px){
+    nav{
+        font-size: 1.2em;
+    }
+}

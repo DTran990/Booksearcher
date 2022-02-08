@@ -15,3 +15,8 @@ footer hr{
     width:90%;
     margin-bottom: 15px;
 }
+
+footer p{
+    text-align: center;
+    width: 85%;
+}

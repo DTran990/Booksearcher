@@ -94,14 +94,16 @@ const Book = (props) => {
   }
   return (
     <div id="Book">
-        <img src={inObject(book,"thumbnail")} alt={book.volumeInfo.title} width="190px" height="260px"/>
-        <div id="info">
-          <h3>{book.volumeInfo.title}</h3>
-          <p className='book-p'><span>Authors:</span> {inObject(book,'authors')}</p>
-          <p className='book-p'><span>Date Published:</span> {inObject(book, 'publishdate')}</p>
-          <p className='book-p'><span>Publisher:</span> {inObject(book, 'publisher')}</p>
-          <p className='book-p'><span>Categories:</span> {inObject(book,'categories')}</p>
-          <p className='book-p'><span>Page Count:</span> {inObject(book,'pages')}</p>
+        <div id="bookcard">
+          <img src={inObject(book,"thumbnail")} alt={book.volumeInfo.title} width="190px" height="260px"/>
+          <div id="info">
+            <h3>{book.volumeInfo.title}</h3>
+            <p className='book-p'><span>Authors:</span> {inObject(book,'authors')}</p>
+            <p className='book-p'><span>Date Published:</span> {inObject(book, 'publishdate')}</p>
+            <p className='book-p'><span>Publisher:</span> {inObject(book, 'publisher')}</p>
+            <p className='book-p'><span>Categories:</span> {inObject(book,'categories')}</p>
+            <p className='book-p'><span>Page Count:</span> {inObject(book,'pages')}</p>
+          </div>
         </div>
         <div id="desc">
           <h3>Book Description</h3>

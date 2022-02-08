@@ -8,10 +8,17 @@
     margin-top:150px;
 }
 
+#bookcard{
+    display:flex;
+    width:50%;
+    min-height: 260px;
+    background:#0D5C63;
+}
+
 #info{
     background: #0D5C63;
     padding: 15px;
-    height: 260px;
+    min-height: 260px;
     width: 500px;
     
 }
@@ -51,3 +58,36 @@
     left: 15px;
 }
 
+@media only screen and (max-width: 1000px){
+    #Book{
+        flex-direction: column;
+    }
+
+    #bookcard{
+        margin-bottom:15px;
+        width: 100%;
+    }
+
+    #desc{
+        width: 95%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 475px){
+    #bookcard{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #info{
+        width: 95%;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 232px){
+    #info{
+        width:190px;
+    }
+}
